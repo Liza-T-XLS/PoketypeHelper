@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<h1>Pokétype Helper</h1>
+
+{% for type in types %}
+    <button data-type-name="{{type.name}}" data-type-weaknesses="{{type.weaknesses|json_encode|e('html_attr')}}">{{type.name}}</button>
+{% endfor %}
+    <ul id="typeList">
+    </ul>
+{% endblock %}
