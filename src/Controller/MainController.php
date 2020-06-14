@@ -21,4 +21,11 @@ class MainController extends AbstractController
             'types' => $types,
         ]);
     }
+
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about() {
+        return $this->render('main/about.html.twig');
+    }
 }

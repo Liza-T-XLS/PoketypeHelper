@@ -9,7 +9,19 @@
         {% endblock %}
     </head>
     <body>
+        <header>
+            <nav>
+                <a {% block menu_home %}{% endblock %} href="{{ path('index') }}">Home</a>
+                <a {% block menu_about %}{% endblock %} href="{{ path('about') }}">About</a>
+            </nav>
+            <h1>Pokétype Helper</h1>
+        </header>
         {% block body %}{% endblock %}
+        <footer>
+
+            <p>Pokémon is a trademark of Nintendo</p>
+
+        </footer>
         {% block javascripts %}<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>{% endblock %}
     </body>
 </html>

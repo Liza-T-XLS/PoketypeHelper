@@ -4,10 +4,33 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+header {
+    background-color: #2872ba;
+}
+
+nav {
+    color: #fecb07;
+    font-weight: bold;
+    text-align: left;
+    padding: 1rem 1rem 0rem 1rem;
+}
+
+a {
+    padding: 1rem;
+}
+
+a:visited {
+   color: #fecb07;
+}
+
+.current {
+    font-size: 1.5rem;
+}
+
 h1 {
     color: #fecb07;
     text-align: center;
-    background-color: #2872ba;
+   
     margin-top: 0;
     margin-bottom: 2rem;
     padding: 2rem;
@@ -68,6 +91,12 @@ img {
 p {
     margin-bottom: 2rem;
 }
+
+#about {
+    padding: 3rem;
+    text-align: left;
+}
+
 .selected {
     display: block;
 }
@@ -144,3 +173,8 @@ p {
     background-color: #fdb9e9;
 }
 
+
+footer {
+    margin-top: 5rem;
+    font-size: 0.8rem;
+}
