@@ -109,7 +109,7 @@ private $types = [
         ],
     ],
     ['name' => 'dragon',
-        'weaknesses' => [
+    'weaknesses' => [
         'ice',
         'dragon',
         'fairy',
@@ -123,7 +123,7 @@ private $types = [
         ],
     ],
     ['name' => 'fairy',
-        'weaknesses' => [
+    'weaknesses' => [
         'poison',
         'steel',
         ],

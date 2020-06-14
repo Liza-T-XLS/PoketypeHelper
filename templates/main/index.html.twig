@@ -1,11 +1,25 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-<h1>Pokétype Helper</h1>
+<header>
+    <h1>Pokétype Helper</h1>
+</header>
+<main class="bodyType">
+    <div>
+        <p>Which type of Pokémon are you fighting?</p>
+        {% for type in types %}
+            <button class="{{type.name}}" data-type-name="{{type.name}}" data-type-weaknesses="{{type.weaknesses|json_encode|e('html_attr')}}">{{type.name}}</button>
+        {% endfor %}
+    </div>
+    <div>
+        {% for type in types %}
+            <img id="{{type.name}}" src="{{ asset('images/' ~ type.name ~ '.png') }}" alt="{{ type.name }}">
+        {% endfor %}
+        <p id="choice"></p>
+        <ul id="typeList">
+        </ul>
+    </div>
 
-{% for type in types %}
-    <button data-type-name="{{type.name}}" data-type-weaknesses="{{type.weaknesses|json_encode|e('html_attr')}}">{{type.name}}</button>
-{% endfor %}
-    <ul id="typeList">
-    </ul>
+
+</main>
 {% endblock %}
