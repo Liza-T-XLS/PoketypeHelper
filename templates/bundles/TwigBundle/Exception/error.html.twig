@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{# to checkout the custom error page (adapt the status code): http://127.0.0.1:8000/index.php/_error/404 #}
+{% block body %}
+    <h2>Error!</h2>
+
+    <p>
+        An error occurred, please <a style="padding: 0;" href="{{ path('index') }}">return to the homepage</a>.
+    </p>
+{% endblock %}
