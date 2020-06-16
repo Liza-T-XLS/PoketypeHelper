@@ -2,6 +2,7 @@ const app = {
 
     buttons: document.getElementsByTagName('button'),
     images: document.getElementsByTagName('img'),
+
     init: function() {
         console.log('init');
         console.log(app.buttons);
@@ -10,17 +11,28 @@ const app = {
         };
         window.addEventListener('resize', app.resizeHandler);
     },
+
     buttonsHandler: function(e) {
         console.log('clicked');
+        console.log(e.target);
+        var target = e.target;
+
+        if(target.matches('.active')) {
+            console.log('active');
+            document.getElementById('weaknesses').style.display = 'none';
+            target.classList.remove('active');
+            return true;
+        };
+        
+        document.getElementById('weaknesses').style.display = 'block';
+        
         for (button of app.buttons) {
             button.classList.remove('active');
         };
         for (image of app.images) {
             image.classList.remove('selected');
         };
-        
-        console.log(e.target);
-        var target = e.target;
+
         target.classList.add('active');
         console.log(e.target.dataset.typeName);
         var typeName = e.target.dataset.typeName;
