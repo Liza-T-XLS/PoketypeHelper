@@ -178,3 +178,20 @@ footer {
     margin-top: 5rem;
     font-size: 0.8rem;
 }
+
+@media (max-width: 425px) {
+
+
+    button {
+        box-sizing: border-box;
+        width: calc(100% - 2.5rem);
+    }
+
+    .active {
+        transform: none;
+    }
+
+    #weaknesses {
+        margin-bottom: 2rem;
+    }
+}

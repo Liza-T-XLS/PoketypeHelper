@@ -7,7 +7,8 @@ const app = {
         console.log(app.buttons);
         for (button of app.buttons) {
             button.addEventListener('click', app.buttonsHandler);
-        }
+        };
+        window.addEventListener('resize', app.resizeHandler);
     },
     buttonsHandler: function(e) {
         console.log('clicked');
@@ -32,7 +33,7 @@ const app = {
         var list = document.getElementById('typeList');
         list.innerHTML = '';
         var choice = document.getElementById('choice');
-        console.log(weaknesses.length);
+
         if (weaknesses.length == 1) {
             choice.innerText = "Against this type, you should choose Pokémon which type is:";
         } else {
@@ -46,6 +47,29 @@ const app = {
             list.appendChild(li);
         }
 
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            console.log('small indeed');
+            var weaknessesDiv = document.getElementById('weaknesses');
+            target.after(weaknessesDiv);
+        }
+
+    },
+
+    resizeHandler: function(e) {
+        if (window.matchMedia("(min-width: 426px)").matches) {
+            target = document.getElementById('types');
+            console.log(target);
+            var weaknessesDiv = document.getElementById('weaknesses');
+            console.log(target.parentNode);
+            target.after(weaknessesDiv);
+        }
+        if (window.matchMedia("(max-width: 425px)").matches) {
+            target = document.querySelector('.active');
+            console.log(target);
+            var weaknessesDiv = document.getElementById('weaknesses');
+            console.log(target.parentNode);
+            target.after(weaknessesDiv);
+        }
     }
 
 }
