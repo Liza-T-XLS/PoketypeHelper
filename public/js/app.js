@@ -21,18 +21,21 @@ const app = {
             console.log('active');
             document.getElementById('weaknesses').style.display = 'none';
             target.classList.remove('active');
+            target.style.boxShadow = 'none';
             return true;
         };
         
         document.getElementById('weaknesses').style.display = 'block';
         
+
         for (button of app.buttons) {
             button.classList.remove('active');
+            button.style.boxShadow = 'none';
         };
         for (image of app.images) {
             image.classList.remove('selected');
         };
-
+        target.style.boxShadow = '5px 5px 15px #555';
         target.classList.add('active');
         console.log(e.target.dataset.typeName);
         var typeName = e.target.dataset.typeName;
