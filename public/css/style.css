@@ -187,6 +187,10 @@ footer {
         width: calc(100% - 2.5rem);
     }
 
+    button:hover {
+        box-shadow: unset;
+    }
+
     .active {
         transform: none;
     }
