@@ -55,7 +55,7 @@ const app = {
             list.appendChild(li);
         }
 
-        if (window.matchMedia("(max-width: 425px)").matches) {
+        if (window.matchMedia("(max-width: 812px)").matches) {
             
             var weaknessesDiv = document.getElementById('weaknesses');
             target.after(weaknessesDiv);
@@ -64,12 +64,12 @@ const app = {
     },
 
     resizeHandler: function(e) {
-        if (window.matchMedia("(min-width: 426px)").matches) {
+        if (window.matchMedia("(min-width: 813px)").matches) {
             target = document.getElementById('types');
             var weaknessesDiv = document.getElementById('weaknesses');
             target.after(weaknessesDiv);
         }
-        if (window.matchMedia("(max-width: 425px)").matches) {
+        if (window.matchMedia("(max-width: 812px)").matches) {
             target = document.querySelector('.active');
             var weaknessesDiv = document.getElementById('weaknesses');
             target.after(weaknessesDiv);
