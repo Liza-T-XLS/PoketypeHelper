@@ -179,6 +179,10 @@ footer {
     font-size: 0.8rem;
 }
 
+footer a {
+    padding: 0;
+}
+
 @media (max-width: 812px) {
 
 

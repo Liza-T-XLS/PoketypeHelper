@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>{% block title %}Pokétype Helper - Home{% endblock %}</title>
-        {% block stylesheets %}
+        <meta name="description" content="A simple tool to help you choose the most appropriate type of Pokémon for your fights!">
+        <title>{% block title %}Pokétype Helper{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-        {% endblock %}
+        <link rel="icon" type="image/png" href="{{ asset('images/pokeball.png') }}">
     </head>
     <body>
         <header>
@@ -21,7 +22,9 @@
         {% block body %}{% endblock %}
         <footer>
 
-            <p>&copy; Liza-T-XLS - Pokémon is a trademark of Nintendo</p>
+            <p>&copy; Liza-T-XLS - Pokémon is a trademark of Nintendo<br>
+            Favicon made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons" target="_blank" rel="noopener noreferrer">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="_blank" rel="noopener noreferrer">www.flaticon.com</a>
+            </p>
 
         </footer>
         {% block javascripts %}<script type="text/javascript" src="{{ asset('js/app.js') }}"></script>{% endblock %}
