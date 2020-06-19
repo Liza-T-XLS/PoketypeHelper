@@ -42,6 +42,8 @@ const app = {
         list.innerHTML = '';
         var choice = document.getElementById('choice');
 
+
+
         if (weaknesses.length == 1) {
             choice.innerText = "Against this type, you should choose Pokémon which type is:";
         } else {
@@ -59,6 +61,14 @@ const app = {
             
             var weaknessesDiv = document.getElementById('weaknesses');
             target.after(weaknessesDiv);
+
+            var destinationTop = target.getBoundingClientRect().top + window.scrollY;
+            console.log(destinationTop);
+            window.scrollTo({
+                top: destinationTop,
+                left: 0,
+                behavior: 'smooth'
+              });
         }
 
     },
@@ -72,7 +82,9 @@ const app = {
         if (window.matchMedia("(max-width: 812px)").matches) {
             target = document.querySelector('.active');
             var weaknessesDiv = document.getElementById('weaknesses');
+            if (target) {
             target.after(weaknessesDiv);
+            };
         }
     }
 
