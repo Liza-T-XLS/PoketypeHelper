@@ -63,7 +63,7 @@ const app = {
             target.after(weaknessesDiv);
 
             var destinationTop = target.getBoundingClientRect().top + window.scrollY;
-            console.log(destinationTop);
+            
             window.scrollTo({
                 top: destinationTop,
                 left: 0,
