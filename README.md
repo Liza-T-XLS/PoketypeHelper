@@ -8,4 +8,4 @@ Available at: https://ec2-100-26-229-239.compute-1.amazonaws.com/
 
 #HTML #CSS #Javascript #ResponsiveDesign #Symfony #Twig #Deployment #HTTPS
 
-![wireframe](/public/images/Poketype-HomepageWireframe.png)
+![wireframe](/public/images/Poketype-HomepageWireframe2.png)
