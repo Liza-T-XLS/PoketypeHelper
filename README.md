@@ -8,6 +8,8 @@ I wanted something simple to help me choose which Pokémon to use when facing a 
 
 Currently offline.
 
+To read the code with VS Code: https://github1s.com/Liza-T-XLS/PoketypeHelper
+
 #HTML #CSS #Javascript #ResponsiveDesign #Symfony #Twig #Deployment #HTTPS
 
 ![wireframe](/public/images/Poketype-HomepageWireframe2.png)
